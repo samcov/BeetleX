@@ -36,4 +36,8 @@
     <Compile Remove="Buffers\BinaryWriter.cs" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath) &quot;C:\AvbLibraries\DotNetCoreLibs&quot;&#xD;&#xA;" />
+  </Target>
+
 </Project>
